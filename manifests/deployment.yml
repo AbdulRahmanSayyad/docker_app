@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: abdulrahmansayyaddockerapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: abdulrahmansayyaddockerapp
+  template:
+    metadata:
+      labels:
+        app: abdulrahmansayyaddockerapp 
+    spec:
+      containers:
+        - name: abdulrahmansayyaddockerapp 
+          image: abdulcr.azurecr.io/abdulrahmansayyaddockerapp
+          ports:
+          - containerPort: 80
